@@ -58,8 +58,8 @@ const generateId = () => {
 app.post('/api/notes', (request, response) => {
   const body = request.body
 
-  if (!body.name) {
-    return response.status(400).json({error: 'name missing'})
+  if (!body.content) {
+    return response.status(400).json({error: 'content missing'})
   }
 
   const note = {
